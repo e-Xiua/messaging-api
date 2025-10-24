@@ -53,7 +53,7 @@ spring:
 # Custom Application Configuration
 app:
   jwt:
-    secret: ${JWT_SECRET:tu-clave-secreta-muy-segura-cambiala-en-produccion}
+    secret: ${JWT_SECRET:estaEsUnaClaveSecretaMuySeguraParaFirmarLosTokensJWT}
     expiration: 86400000
   websocket:
     allowed-origins:
