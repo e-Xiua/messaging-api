@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  messaging_api:
+    build:
+      context: ./messaging
+      dockerfile: Dockerfile
+    image: messaging-api:latest
+    container_name: messaging-api
+    ports:
+      - "${MESSAGING_API_PORT:-8089}:8089"
+    environment:
+      # Spring Profile
+      - SPRING_PROFILES_ACTIVE=docker
+      
+      # Server Configuration
+      - SERVER_PORT=${SERVER_PORT:-8089}
+      
+      # RabbitMQ Configuration
+      - RABBITMQ_HOST=${RABBITMQ_HOST:-rabbitmq}
+      - RABBITMQ_PORT=${RABBITMQ_PORT:-5672}
+      - RABBITMQ_USERNAME=${RABBITMQ_USERNAME:-user}
+      - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD:-user}
+      
+      # Feign Clients URLs
+
+      - TURISTA_SERVICE_URL=${TURISTA_SERVICE_URL:-http://admin-users-api:8082}
+
+      # Java Options (construido desde variables separadas)
+      - JAVA_OPTS=-Xms${JAVA_OPTS_XMS:-256m} -Xmx${JAVA_OPTS_XMX:-512m}
+    
+    networks:
+      - tesisNetwork
+    
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8089/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  tesisNetwork:
+    external: true
