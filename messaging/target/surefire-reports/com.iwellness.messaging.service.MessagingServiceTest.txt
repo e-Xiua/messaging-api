@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.iwellness.messaging.service.MessagingServiceTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.485 s -- in com.iwellness.messaging.service.MessagingServiceTest

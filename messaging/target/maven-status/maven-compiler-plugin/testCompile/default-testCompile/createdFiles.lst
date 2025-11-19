@@ -1,0 +1,4 @@
+com/iwellness/messaging/controller/ChatControllerTest.class
+com/iwellness/messaging/controller/ConversationControllerTest.class
+com/iwellness/messaging/service/MessagingServiceTest.class
+com/iwellness/messaging/MessagingApiApplicationTests.class

@@ -1,0 +1,4 @@
+/home/estudiante/Tesis/messaging-api/messaging/src/test/java/com/iwellness/messaging/MessagingApiApplicationTests.java
+/home/estudiante/Tesis/messaging-api/messaging/src/test/java/com/iwellness/messaging/controller/ChatControllerTest.java
+/home/estudiante/Tesis/messaging-api/messaging/src/test/java/com/iwellness/messaging/controller/ConversationControllerTest.java
+/home/estudiante/Tesis/messaging-api/messaging/src/test/java/com/iwellness/messaging/service/MessagingServiceTest.java

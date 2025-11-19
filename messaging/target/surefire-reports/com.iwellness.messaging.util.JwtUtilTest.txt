@@ -1,0 +1,147 @@
+-------------------------------------------------------------------------------
+Test set: com.iwellness.messaging.util.JwtUtilTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 6, Errors: 7, Skipped: 0, Time elapsed: 0.274 s <<< FAILURE! -- in com.iwellness.messaging.util.JwtUtilTest
+com.iwellness.messaging.util.JwtUtilTest.testExtractProviderId -- Time elapsed: 0.209 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtil.extractProviderId(JwtUtil.java:48)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractProviderId(JwtUtilTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractUsername -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtil.extractUsername(JwtUtil.java:44)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractUsername(JwtUtilTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractClaim_Subject -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractClaim_Subject(JwtUtilTest.java:139)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractUsername_DifferentUsers -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtil.extractUsername(JwtUtil.java:44)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractUsername_DifferentUsers(JwtUtilTest.java:172)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractProviderId_MissingClaim -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtil.extractProviderId(JwtUtil.java:48)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractProviderId_MissingClaim(JwtUtilTest.java:192)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_EmptyString -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_EmptyString(JwtUtilTest.java:150)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_InvalidSignature -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_InvalidSignature(JwtUtilTest.java:209)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Null -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Null(JwtUtilTest.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_InvalidFormat -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_InvalidFormat(JwtUtilTest.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Valid -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Valid(JwtUtilTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Expired -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.Exception to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.iwellness.messaging.util.JwtUtilTest.testValidateToken_Expired(JwtUtilTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractExpiration -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtil.extractExpiration(JwtUtil.java:52)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractExpiration(JwtUtilTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.iwellness.messaging.util.JwtUtilTest.testExtractClaim_CustomClaim -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "this.secret" is null
+	at com.iwellness.messaging.util.JwtUtil.getSigningKey(JwtUtil.java:26)
+	at com.iwellness.messaging.util.JwtUtil.extractAllClaims(JwtUtil.java:32)
+	at com.iwellness.messaging.util.JwtUtil.extractClaim(JwtUtil.java:39)
+	at com.iwellness.messaging.util.JwtUtilTest.testExtractClaim_CustomClaim(JwtUtilTest.java:128)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
